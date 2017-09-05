@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>红旅动漫</title>
+    <link rel="stylesheet/less" href="./css/base.less">
+    <link rel="stylesheet/less" href="./css/index.less">
+    <link rel="stylesheet" href="./lib/SUI/css/sm.css">
+    <link rel="stylesheet/less" href="./lib/swiper/less/swiper.less">
+</head>
+
+<body>
+
+    <div class="page page-current" id='router'>
+        <!-- 标题栏 -->
+        <header class="bar bar-nav">
+            <a class="icon icon-menu pull-left open-panel" id="my_bar-Left"></a>
+            <a class="icon icon-search pull-right" id="my_bar-Right"></a>
+            <h1 class="title">红旅动漫</h1>
+        </header>
+        <div class="content">
+            <!--轮播图  -->
+            <seaction id="slide">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper" id="slidMain">
+
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination" id="littleMoun"></div>
+                </div>
+            </seaction>
+            <!--table栏  -->
+            <div class="buttons-tab">
+                <a href="#tab1" class="tab-link active button">新增连载</a>
+                <a href="#tab2" class="tab-link button">新增完结</a>
+                <a href="#tab3" class="tab-link button">推荐连载</a>
+                <a href="#tab4" class="tab-link button">推荐完结</a>
+            </div>
+            <div class="tabs">
+                <div id="tab1" class="tab active"></div>
+                <div id="tab2" class="tab"></div>
+                <div id="tab3" class="tab"></div>
+                <div id="tab4" class="tab"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--连载动画  -->
+    <div class="page" id='router3'>
+        <header class="bar bar-nav">
+            <a class="button button-link button-nav pull-left back" href="/docs-demos/router">
+      <span class="icon icon-left"></span>
+      返回
+            </a>
+            <h1 class='title'>专题列表</h1>
+        </header>
+        <div class="content">
+            <div class="list-block media-list">
+                <ul>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--专题列表  -->
+    <div class="page" id='router4'>
+        <header class="bar bar-nav">
+            <a class="button button-link button-nav pull-left back" href="/docs-demos/router">
+      <span class="icon icon-left"></span>
+      返回
+            </a>
+            <h1 class='title'>连载动漫</h1>
+        </header>
+        <div class="content">
+
+        </div>
+    </div>
+    <!-- popup, panel 等放在这里 -->
+    <div class="panel-overlay"></div>
+    <!--侧边栏  -->
+    <div class="panel panel-left panel-reveal" id="panelLeft">
+        <div class="content-block">
+            <img src="./img/logo.png" alt="logo">
+            <div class="list-block contacts-block">
+                <div class="list-group">
+                    <ul>
+                        <li>
+                            <a href="#router3">
+                                <div class="item-content item-link">
+                                    <div class="item-inner">
+                                        <div class="item-title">连载动漫</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#router4">
+                                <div class="item-content item-link">
+                                    <div class="item-inner">
+                                        <div class="item-title">专题列表</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascipt:void(0)" class="alert-text-title">
+                                <div class="item-content item-link">
+                                    <div class="item-inner">
+                                        <div class="item-title">关于</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+</body>
+
+</html>
+<script src="./lib/jquery-1.12.4.min.js"></script>
+<script src="./lib/less/less.js"></script>
+<script src="./lib/SUI/zepto.min.js"></script>
+<script src="./lib/SUI/js/sm.js"></script>
+<script src="./lib/template-web.js"></script>
+<script src="./js/index.js"></script>
+<script src="./lib/swiper/swiper-3.4.2.jquery.min.js"></script>
+<!--主体模板  -->
+<script type="text/html" id="mainTemp1">
+    <div class="row">
+        {{each}}
+        <a href="{{$value.url}}" class="col-50 ">
+            <img src="{{$value.img}}" alt="{{$value.name}}">
+            <div class="lzUpdate">{{$value.update}}</div> 
+            <div class="lzName">{{$value.name}}</div>  
+    </a> {{/each}}
+    </div>
+</script>
+<!--轮播图模板  -->
+<script id="slideTemp" type="text/html">
+    {{each}}
+    <div class="swiper-slide">
+        <a href="{{$value.url}}">
+            <img src="{{$value.img}}">
+            <span class="slideText">{{$value.title}}</span>
+        </a>
+    </div>
+    {{/each}}
+</script>
+<!--连载  -->
+<script type="text/html " id="lzTemp">
+    {{each}}
+    <li>
+        <a href="{{$value.url}}" class="item-link item-content">
+            <div class="item-media"><img src="{{$value.img}}" style='width: 4rem;'></div>
+            <div class="item-inner">
+                <div class="item-subtitle">{{$value.name}}</div>
+                <div class="item-text">{{$value.episode}}</div>
+                <div class="item-text">{{$value.updateTime}}</div>
+                <div class="item-text">下载次数：{{$value.downloadCount}}</div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<!--专题列表  -->
+<script type="text/html" id="ztlbTemp">
+    {{each}}
+    <div class="card demo-card-header-pic">
+        <div valign="bottom" class="card-header color-white no-border no-padding">
+            <a href="{{$value.url}}">
+                <img class='card-cover' src="{{$value.img}}"
+                alt="{{$value.title}}">
+            </a>
+        </div>
+        <div class="card-content">
+            <div class="card-content-inner">
+                <p class="color-gray">{{$value.title}}</p>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</script>

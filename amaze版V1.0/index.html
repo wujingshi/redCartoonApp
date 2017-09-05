@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="stylesheet/less" href="./css/base.less">
+    <link rel="stylesheet/less" href="./css/index.less">
+    <link rel="stylesheet" href="./lib/assets/amazeui.css">
+    <link rel="stylesheet/less" href="./lib/swiper/less/swiper.less">
+</head>
+
+<body>
+    <!--顶部  -->
+    <header id="header" data-am-widget="header" class="am-header am-header-default">
+        <div class="am-header-left am-header-nav">
+            <a href="#left-link" class="left" data-am-offcanvas="{target: '#left-link', effect: 'push'}">
+                <i class="am-header-icon am-icon-bars"></i>
+            </a>
+            <!-- 侧边栏内容 -->
+            <div id="left-link" class="am-offcanvas">
+                <div class="am-offcanvas-bar">
+                    <div class="am-offcanvas-content">
+                        <a href="#"><img src="./img/logo.png" alt=""/></a>
+                        <ul class="am-list">
+                            <li><a href="#lzdh">连载动漫-get<i class="am-header-icon am-icon-angle-right"></i></a></li>
+                            <li><a href="#ztlb">专题列表-get<i class="am-header-icon am-icon-angle-right"></i></a></li>
+                            <li><a href="javascript:void (0)" data-am-modal="{target: '#my-alert'}">关于<i class="am-header-icon am-icon-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--关于按钮弹窗-->
+        <div class="am-modal am-modal-alert" tabindex="-1" id="my-alert">
+            <div class="am-modal-dialog">
+                <div class="am-modal-hd">关于本网站</div>
+                <div class="am-modal-bd">
+                    作者：前端十期小菜鸟--吴静施
+                    <br/> 使用框架：amazeui
+                    <br/> 友情提示：如有疑问请内网通私密我
+                </div>
+                <div class="am-modal-footer">
+                    <span class="am-modal-btn">已阅读</span>
+                </div>
+            </div>
+        </div>
+
+        <!---->
+        <h1 class="am-header-title">
+            <a href="#title-link" class="">红旅动漫</a>
+        </h1>
+
+        <div class="am-header-right am-header-nav">
+            <a href="#right-link" class="right">
+                <i class="am-header-icon am-icon-search"></i>
+          </a>
+        </div>
+    </header>
+    <!--轮播图  -->
+    <seaction id="slide">
+        <div class="swiper-container">
+            <div class="swiper-wrapper" id="slidMain">
+
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination" id="littleMoun"></div>
+        </div>
+    </seaction>
+    <!--主页内容  -->
+    <main id="main">
+        <div data-am-widget="tabs" class="am-tabs am-tabs-d2">
+            <ul class="am-tabs-nav am-cf" id="typeNum">
+                <li class="am-active"><a href="[data-tab-panel-1]" type="1">新增连载</a></li>
+                <li class=""><a href="[data-tab-panel-2]" type="2">新增完结</a></li>
+                <li class=""><a href="[data-tab-panel-3]" type="3">推荐连载</a></li>
+                <li class=""><a href="[data-tab-panel-4]" type="4">推荐完结</a></li>
+            </ul>
+            <div class="am-tabs-bd" id="dmfxMain">
+                <div data-tab-panel-1 class="am-tab-panel am-active" id="dmMain1">
+                </div>
+                <div data-tab-panel-2 class="am-tab-panel " id="dmMain2">
+                </div>
+                <div data-tab-panel-3 class="am-tab-panel " id="dmMain3">
+                </div>
+                <div data-tab-panel-4 class="am-tab-panel " id="dmMain4">
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div id="bodyActive">
+    </div>
+
+    <!--专题列表  -->
+    <section id="ztlb">
+        <header data-am-widget="header" class="am-header am-header-default" id="ztlbHead" data-am-sticky="{animation: 'slide-top'}">
+            <div class="am-header-left am-header-nav">
+                <a href="#left-link" class="">
+            <i class="am-header-icon am-icon-angle-left"></i>
+        </a>
+            </div>
+            <h1 class="am-header-title">
+                专题列表
+            </h1>
+        </header>
+        <mbody>
+            <div data-am-widget="list_news" class="am-list-news am-list-news-default" id="ztlb">
+                <!--列表标题-->
+                <div class="am-list-news-bd">
+                    <ul class="am-list">
+                        <!--缩略图在标题上方-->
+
+                    </ul>
+                </div>
+            </div>
+        </mbody>
+    </section>
+
+    <!--连载动画  -->
+    <section id="lzdh">
+        <header data-am-widget="header" class="am-header am-header-default" id="lzdmHead" data-am-sticky="{animation: 'slide-top'}">
+            <div class=" am-header-left am-header-nav ">
+                <a href="#left-link " class=" ">
+            <i class="am-header-icon am-icon-angle-left "></i>
+        </a>
+            </div>
+            <h1 class="am-header-title ">
+                连载动漫
+            </h1>
+        </header>
+        <mbody>
+            <div data-am-widget="list_news " class="am-list-news am-list-news-default ">
+                <div class="am-list-news-bd " id="lzdm ">
+                    <ul class="am-list ">
+                    </ul>
+                </div>
+
+            </div>
+
+        </mbody>
+    </section>
+
+</body>
+
+</html>
+<script src="./lib/jquery-1.12.4.min.js"></script>
+<script src="./lib/assets/amazeui.js"></script>
+<script src="./lib/less/less.js"></script>
+<script src="./js/index.js"></script>
+<script src="./lib/template-web.js"></script>
+<script src="./lib/swiper/swiper-3.4.2.jquery.min.js"></script>
+
+<!--轮播图模板  -->
+<script id="slideTemp" type="text/html">
+    {{each}}
+    <div class="swiper-slide">
+        <a href="{{$value.url}}">
+            <img src="{{$value.img}}">
+            <span class="slideText">{{$value.title}}</span>
+        </a>
+    </div>
+    {{/each}}
+</script>
+
+<!--主体模板  -->
+<script type="text/html" id="mainTemp1">
+    {{each}}
+    <a href="{{$value.url}}" class="am-u-sm-6 am-u-md-4 am-u-lg-3 am-gallery-item ">
+            <img src="{{$value.img}}" alt="{{$value.name}}">
+             <div class="lzUpdate">{{$value.update}}</div> 
+            <div class="lzName">{{$value.name}}</div>  
+    </a> {{/each}}
+</script>
+
+<script type="text/html" id="ztlbTemp">
+    {{each}}
+    <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-top">
+        <div class="am-list-thumb am-u-sm-12">
+            <a href="{{$value.url}}" class="">
+            <img src="{{$value.img}}" alt="{{$value.title}}"/>
+        </a>
+        </div>
+        <div class=" am-list-main">
+            <div class="am-list-item-text">{{$value.title}}</div>
+        </div>
+    </li>
+    {{/each}}
+</script>
+
+
+<script type="text/html " id="lzTemp ">
+    {{each}}
+    <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left ">
+        <div class="am-u-sm-4 am-list-thumb ">
+            <a href="{{$value.url}} " class=" ">
+                <img src="{{$value.img}} " alt="{{$value.name}} "/>
+            </a>
+        </div>
+        <div class=" am-u-sm-8 am-list-main ">
+            <h3 class="am-list-item-hd "><a href="{{$value.url}} " class=" ">{{$value.name}}</a></h3>
+            <div class="am-list-item-text ">{{$value.episode}}</div>
+            <div class="am-list-item-text ">{{$value.updateTime}}</div>
+            <div class="am-list-item-text ">下载次数：{{$value.downloadCount}}</div>
+        </div>
+    </li>
+    {{/each}}
+</script>

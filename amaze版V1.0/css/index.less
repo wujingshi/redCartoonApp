@@ -1,0 +1,206 @@
+// 顶部通栏
+#header {
+    background-color: #ccc;
+    .am-header-left {
+        .left {
+            color: red;
+        }
+        #left-link {
+            .am-offcanvas-bar {
+                background-color: #fff;
+                &::after {
+                    background-color: #fff;
+                }
+                .am-offcanvas-content {
+                    >a {
+                        >img {
+                            width: 100%;
+                            height: 100px;
+                        }
+                    }
+                    >ul {
+                        >li {
+                            >a {
+                                position: relative;
+                                padding: 0;
+                                color: #000;
+                                >i {
+                                    position: absolute;
+                                    right: 20px;
+                                    color: #ccc;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .am-header-title {
+        >a {
+            color: #000;
+            font-size: 20px;
+        }
+    }
+    .am-header-right {
+        .right {
+            color: red;
+        }
+    }
+}
+
+//轮播图 
+#slide {
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        #slidMain {
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+                /* Center slide text vertically */
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+                >a {
+                    position: relative;
+                    >img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                    >span {
+                        position: absolute;
+                        color: #fff;
+                        font-size: 12px;
+                        left: 12px;
+                        bottom: 5px;
+                    }
+                }
+            }
+        }
+        #littleMoun {
+            bottom: 0;
+            background-color: rgba(0, 0, 0, .4);
+            >span {
+                &:first-of-type {
+                    margin-left: 330px;
+                }
+                &.swiper-pagination-bullet-active {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
+
+//主体
+#main {
+    .am-tabs {
+        #typeNum {
+            >li {
+                &::after {
+                    border: 0;
+                }
+                &.am-active {
+                    border-bottom: 2px solid red;
+                }
+                &.am-active a {
+                    color: red;
+                }
+                >a {}
+            }
+        }
+        #dmfxMain {
+            >div {
+                >a {
+                    position: relative;
+                    height: 250px;
+                    border: 1px solid #ccc;
+                    font-size: 12px;
+                    >img {
+                        width: 100%;
+                        height: 220px;
+                    }
+                    .lzUpdate {
+                        position: absolute;
+                        width: 146px;
+                        height: 25px;
+                        line-height: 25px;
+                        bottom: 28px;
+                        text-align: center;
+                        color: #fff;
+                        background-color: rgba(0, 0, 0, .7);
+                    }
+                    .lzName {
+                        width: 100%;
+                        height: 19px;
+                        line-height: 19px;
+                        text-align: center;
+                        color: #ccc;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#lzdh {
+    #mbody {
+        #lzdm {
+            >ul {
+                >li {
+                    .am-list-thumb {
+                        >a {
+                            >img {}
+                        }
+                    }
+                    .am-list-main {
+                        >h3 {
+                            font-size: 13px;
+                            font-weight: bold;
+                        }
+                    }
+                    &:first-of-type {
+                        border: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#ztlb {
+    #mbody {
+        #ztlb {
+            .am-list-news-bd {
+                >ul {
+                    >li {
+                        height: 180px;
+                        .am-list-thumb {
+                            >a {
+                                >img {}
+                            }
+                        }
+                        .am-list-main {
+                            .am-list-item-text {
+                                margin-top: 13.5rem;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
